@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REDCap 101 Training - GVSU</title>
+    <title>Nursing Data Analysis with SPSS - GVSU KCON</title>
     <style>
         /* Global Styling */
 body {
@@ -12,7 +12,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
+    overflow-x: hidden;  /* Prevent horizontal scrolling */
 }
 
 /* Header Styling */
@@ -41,8 +41,8 @@ header h1 {
     display: flex;
     flex-grow: 1;
     height: calc(100vh - 80px);
-    transition: margin-left 0.3s ease;
-    margin-left: 0;
+    transition: margin-left 0.3s ease; /* Smooth transition for content shift */
+    margin-left: 0; /* Default position */
 }
 
 /* Sidebar Styling */
@@ -55,13 +55,13 @@ header h1 {
     z-index: 999;
     position: fixed;
     left: 0;
-    top: 80px;
-    transform: translateX(-250px);
-    transition: transform 0.3s ease;
+    top: 80px; /* Below the header */
+    transform: translateX(-250px); /* Hidden by default */
+    transition: transform 0.3s ease; /* Smooth sliding */
 }
 
 .sidebar.active {
-    transform: translateX(0);
+    transform: translateX(0); /* Slide in when active */
 }
 
 .sidebar a {
@@ -83,12 +83,12 @@ header h1 {
     padding: 20px;
     overflow: auto;
     background-color: #ffffff;
-    transition: margin-left 0.3s ease;
+    transition: margin-left 0.3s ease; /* Smooth transition for content shift */
 }
 
 /* Content Shift */
 .container.shifted {
-    margin-left: 250px;
+    margin-left: 250px; /* Push content to make space for the sidebar */
 }
 
 /* Content Section Styles */
@@ -113,7 +113,26 @@ footer {
     width: 100%;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #00548d;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #00548d;
+    color: white;
+}
+
 /* Responsive Design */
+
+/* For Tablets and Small Screens */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -122,9 +141,9 @@ footer {
     }
 
     header img {
-        height: 60px;
-        width: auto;
-        max-width: 100%;
+        height: 60px; /* Keep a consistent height */
+        width: auto; /* Adjust the width to maintain the aspect ratio */
+        max-width: 100%; /* Ensure it doesn’t exceed its container's width */
     }
 
     header h1 {
@@ -136,18 +155,19 @@ footer {
     }
 
     .sidebar {
-        transform: translateX(-250px);
+        transform: translateX(-250px); /* Adjusted for hidden state */
     }
 
     .container.shifted {
-        margin-left: 250px;
+        margin-left: 250px; /* Push content to make space for the sidebar */
     }
 }
 
+/* For Mobile Phones */
 @media (max-width: 480px) {
     header img {
-        height: 40px;
-        width: auto;
+        height: 40px; /* Smaller height for mobile screens */
+        width: auto; /* Maintain aspect ratio */
     }
 
     header h1 {
@@ -162,6 +182,41 @@ footer {
     .content {
         padding: 15px;
     }
+
+    table, th, td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Make images inside content responsive */
+    .content img {
+        max-width: 100%;  /* Ensure images do not exceed the width of their container */
+        height: auto;     /* Maintain aspect ratio */
+        display: block;   /* Remove any extra spacing below the image */
+        margin: 0 auto;   /* Center the image horizontally */
+    }
+}
+
+/* Additional Adjustments for Readability on Smaller Screens */
+@media (max-width: 320px) {
+    header h1 {
+        font-size: 16px;
+    }
+
+    .sidebar a {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    table, th, td {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 15px;
+    }
 }
     </style>
 </head>
@@ -171,72 +226,55 @@ footer {
         <div style="display: flex; flex-direction: column; align-items: flex-start;">
             <img src="https://raw.githubusercontent.com/dancan1995/gvsu-tutorial/main/images/markleft_kcon_2c_r-web%20(1).jpg" alt="GVSU Logo" width="200" height="100">
         </div>        
-        <h1>REDCap Guide</h1>
-    </header>
+    <!-- <div class="menu-button">☰ Click Here For Menu</div> -->
+    <h1>REDCap Training Guide - GVSU</h1>
+</header>
+<body>
 
-    <div class="content">
-        <div>
-            <h2>Introduction</h2>
-            <p>Welcome to REDCap 101 Training! This guide will walk you through building projects in REDCap.</p>
-            <p>Objectives:</p>
-            <ul>
-                <li>Learn where to access training materials.</li>
-                <li>Understand the basics of project setup and user rights management.</li>
-                <li>Learn to optimize your project using advanced features.</li>
-            </ul>
-        </div>
+    <h1></h1>
+    
+    <h2>1. Home Page</h2>
+    <img src="images/01home.png" alt="REDCap Home Page">
+    
+    <h2>2. Creating a New Project</h2>
+    <img src="images/02NewProject.png" alt="Create New REDCap Project">
+    
+    <h2>3. Designing the Project</h2>
+    <img src="images/03DesignProject.png" alt="Design Project Page">
+    
+    <h2>4. Creating a Data Collection Form</h2>
+    <img src="images/04CreateForm.png" alt="Create Form Page">
+    
+    <h2>5. Continuing with the Online Designer</h2>
+    <img src="images/05ContOfDesignerforForm1.png" alt="Online Designer Continuation">
+    
+    <h2>6. Adding New Fields in the Form</h2>
+    <img src="images/06AddNewFieldsInTheForm.png" alt="Adding Fields to Form">
+    
+    <h2>7. Field Creation & Results</h2>
+    
+    <h3>7.1 Field 1</h3>
+    <img src="images/07Field1.png" alt="Field 1 Creation">
+    <img src="images/07Field1Results.png" alt="Field 1 Results">
+    
+    <h3>7.2 Field 2</h3>
+    <img src="images/07Field2.png" alt="Field 2 Creation">
+    <img src="images/07Field2Results.png" alt="Field 2 Results">
+    
+    <h3>7.3 Field 3</h3>
+    <img src="images/07Field3.png" alt="Field 3 Creation">
+    <img src="images/07Field3Results.png" alt="Field 3 Results">
+    <img src="images/07Field3Results2.png" alt="Field 3 Additional Results">
+    
+    <h3>7.4 Field 4</h3>
+    <img src="images/07Field4.png" alt="Field 4 Creation">
+    <img src="images/07Field4Results.png" alt="Field 4 Results">
+    
+    <h2>8. Using the Data Dictionary</h2>
+    <img src="images/08DataDictionary.png" alt="Data Dictionary in REDCap">
+    
+    <h2>9. Codebook Overview</h2>
+    <img src="images/09Codebook.png" alt="REDCap Codebook">
 
-        <div>
-            <h2>Step 1: Setting Up Your Project</h2>
-            <p>1. Click the <strong>+New Project</strong> tab and complete the form with project details.</p>
-            <p>2. Define whether your project will be a Classic Database or Longitudinal Study. Consider how your data will be collected and organized over time.</p>
-            <p>3. Configure survey settings and enable longitudinal options as applicable.</p>
-            <p>4. Ensure you’ve specified the principal investigator (PI) and study team members.</p>
-        </div>
-
-        <div>
-            <h2>Step 2: Building Data Collection Forms</h2>
-            <p>1. Use the Online Designer to add or modify data collection fields in your project. This includes text fields, dropdowns, and date inputs.</p>
-            <p>2. Leverage features like field validation, branching logic, and action tags to ensure accurate data entry.</p>
-            <p>3. Follow naming conventions for fields to maintain clarity and consistency. For example, use short but meaningful names like <code>birth_date</code> instead of overly descriptive or generic labels.</p>
-            <p>4. Test your forms by entering sample data to ensure they function as expected.</p>
-        </div>
-
-        <div>
-            <h2>Step 3: Managing User Permissions</h2>
-            <p>1. Assign user rights either individually or based on predefined roles for secure access. Roles can include data entry, data analysis, and project design.</p>
-            <p>2. Use Data Access Groups (DAGs) to manage multi-center collaborations, ensuring users only access relevant data.</p>
-            <p>3. Regularly review and update permissions to maintain compliance with data security policies.</p>
-        </div>
-
-        <div>
-            <h2>Step 4: Testing and Moving to Production</h2>
-            <p>1. Test your project thoroughly by entering sample data and reviewing results. Check for errors in field validations, branching logic, and calculations.</p>
-            <p>2. Export test data to validate formatting and usability for analysis. Ensure any sensitive information is correctly de-identified if required.</p>
-            <p>3. After testing, submit your project for production status. This step locks the design and enables live data collection.</p>
-        </div>
-
-        <div>
-            <h2>Step 5: Leveraging Advanced Features</h2>
-            <p>1. Use action tags to automate field behaviors, such as auto-filling fields based on prior responses or disabling fields under certain conditions.</p>
-            <p>2. Apply Smart Variables to dynamically reference project information, such as event names, user IDs, or timestamps, across different forms or events.</p>
-            <p>3. Configure longitudinal events and designate instruments for flexible data collection over multiple time points.</p>
-            <p>4. Explore advanced survey features like automated invitations, survey queues, and conditional survey logic.</p>
-        </div>
-
-        <div>
-            <h2>Step 6: Utilizing Training Resources</h2>
-            <p>1. Access training videos and tutorials available within REDCap under the "Help & FAQ" section.</p>
-            <p>2. Review the REDCap documentation for detailed guidance on advanced features and troubleshooting tips.</p>
-            <p>3. Participate in live training sessions or webinars hosted by your institution or REDCap support team.</p>
-        </div>
-
-        <div>
-            <h2>Step 7: Maintaining and Updating Your Project</h2>
-            <p>1. Regularly monitor your project for data quality issues, such as missing or inconsistent entries.</p>
-            <p>2. Update your project as needed, but be cautious when making changes to forms or logic that could impact existing data.</p>
-            <p>3. Archive completed projects or export data for long-term storage and analysis.</p>
-        </div>
-    </div>
 </body>
 </html>
