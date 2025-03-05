@@ -254,8 +254,69 @@
         <img src="https://raw.githubusercontent.com/dancan1995/REDcap_Guide/main/images/07Field2Results.png" alt="Field 2 Results">
 
         <h3>7.3 Field 3</h3>
+        <h4>Adding Health Insurance</h4>
+        <ul>
+            <li><strong>Field Type:</strong> Yes-No</li>
+            <li><strong>Field Label:</strong> "Do you have health insurance?"</li>
+            <li><strong>Choices:</strong> 1 = Yes, 0 = No</li>
+            <li><strong>Variable Name:</strong> health_insurance</li>
+            <li><strong>Required:</strong> Yes/No (Based on project needs)</li>
+            <li><strong>Custom Alignment:</strong> Right / Vertical (EV)</li>
+            <li class="save">Click Save ✅</li>
+        </ul>
         <img src="https://raw.githubusercontent.com/dancan1995/REDcap_Guide/main/images/07Field3.png" alt="Field 3 Creation">
+        <h4>BP & Sugar Level Matrix</h4>
+        <ul>
+            <li><strong>Matrix Header:</strong> "BP and Sugar level Measurements"</li>
+            <li><strong>Matrix Rows:</strong>
+                <ul>
+                    <li>Blood pressure measured (bp_measure)</li>
+                    <li>Sugar level measured (sugar_level)</li>
+                </ul>
+            </li>
+            <li><strong>Answer Format:</strong> Yes-No Radio Buttons</li>
+            <li><strong>Matrix Group Name:</strong> metrics</li>
+            <li class="save">Click Save ✅</li>
+        </ul>
         <img src="https://raw.githubusercontent.com/dancan1995/REDcap_Guide/main/images/07Field3Results.png" alt="Field 3 Results">
+        <div class="container">
+            <div class="entry">
+                <p><strong>Variable Name:</strong> record_id</p>
+                <p><strong>Description:</strong> A unique identifier for each participant or entry in the database.</p>
+            </div>
+    
+            <div class="entry">
+                <p><strong>Variable Name:</strong> dob</p>
+                <p><strong>Description:</strong> Captures the participant's birth date, which may be used for age calculations.</p>
+            </div>
+    
+            <div class="entry">
+                <p><strong>Variable Name:</strong> place_of_birth</p>
+                <p><strong>Description:</strong> A multiple-choice field where participants select their place of birth (e.g., USA, UK, Canada, etc.).</p>
+            </div>
+    
+            <div class="entry">
+                <p><strong>Variable Name:</strong> health_insurance</p>
+                <p><strong>Description:</strong> A Yes/No field that asks participants if they have health insurance.</p>
+            </div>
+    
+            <div class="entry">
+                <p><strong>Matrix Header:</strong> "BP and Sugar level Measurements"</p>
+                <p><strong>Matrix Variables:</strong></p>
+                <ul>
+                    <li><strong>Blood Pressure Measured (bp_measure):</strong> A Yes/No response indicating whether blood pressure was measured.</li>
+                    <li><strong>Sugar Level Measured (sugar_level):</strong> A Yes/No response indicating whether blood sugar level was measured.</li>
+                </ul>
+                <p><strong>Answer Format:</strong> Yes-No radio buttons for each row.</p>
+                <p><strong>Matrix Group Name:</strong> metrics</p>
+            </div>
+    
+            <div class="entry">
+                <p>The individual fields (Date of Birth, Place of Birth, Health Insurance) are designed to collect essential participant details.</p>
+                <p>The matrix fields allow efficient grouping of health-related measurements in a structured format, ensuring easy data entry and analysis.</p>
+                <p>This setup ensures that the data is collected in a systematic and user-friendly way, optimizing data consistency and accuracy for analysis.</p>
+            </div>
+        </div>
         <img src="https://raw.githubusercontent.com/dancan1995/REDcap_Guide/main/images/07Field3Results2.png" alt="Field 3 Additional Results">
 
         <h3>7.4 Field 4</h3>
