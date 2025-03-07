@@ -101,9 +101,15 @@
             text-align: left;
         } 
 
-        ol {
+    .entry {
         text-align: left;
+    }
+    ol {
         padding-left: 20px; /* Ensures proper indentation */
+        list-style-position: outside; /* Ensures numbers are aligned left */
+    }
+    li {
+        display: block; /* Forces text to start directly under numbers */
     }
     </style>
 </head>
